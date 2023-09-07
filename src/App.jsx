@@ -15,10 +15,22 @@ export default App;
 
 // TO DO
 
-// add basic styling to navbar
-
 // create home page
 
 // create shop page
 
 // create cart page
+
+//
+
+// STYLING
+
+// find font
+
+// add styling to nav bar
+
+//// add and style shop name
+
+//// style nav links
+
+//// find shopping cart icon
