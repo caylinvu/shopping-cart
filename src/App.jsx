@@ -15,4 +15,10 @@ export default App;
 
 // TO DO
 
-// create main component files
+// add basic styling to navbar
+
+// create home page
+
+// create shop page
+
+// create cart page

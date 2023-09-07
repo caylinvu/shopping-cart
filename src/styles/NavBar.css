@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+.shop-name {
+  display: flex;
+  align-items: center;
+}
+
+.shop-name a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}

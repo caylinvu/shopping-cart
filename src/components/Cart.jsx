@@ -1,6 +1,6 @@
 function Cart() {
   return (
-    <div>
+    <div className="cart-page">
       <div>THIS IS THE CART PAGE</div>
     </div>
   );
