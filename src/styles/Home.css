@@ -1,0 +1,50 @@
+.introduction {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.introduction h1 {
+  font-size: 36px;
+}
+
+.introduction p {
+  font-size: 19px;
+  color: darkslategray;
+}
+
+.introduction button {
+  border: none;
+  background-color: rgb(197, 98, 131);
+  color: white;
+  font-weight: 600;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.introduction button:hover {
+  cursor: pointer;
+}
+
+.featured {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 40px 0;
+  flex-grow: 1;
+}
+
+.featured h2 {
+  font-size: 30px;
+}
+
+/* .featured .items {
+  max-width: 1000px;
+  margin: auto;
+} */

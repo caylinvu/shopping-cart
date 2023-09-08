@@ -25,12 +25,4 @@ export default App;
 
 // STYLING
 
-// find font
-
-// add styling to nav bar
-
-//// add and style shop name
-
-//// style nav links
-
-//// find shopping cart icon
+//
