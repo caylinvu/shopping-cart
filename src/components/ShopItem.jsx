@@ -8,7 +8,7 @@ function ShopItem({ imgUrl, title, price }) {
         <img src={imgUrl} alt="" />
       </div>
       <div className="txt-container">
-        <h3>{title}</h3>
+        <h3>{title.length < 60 ? title : title.slice(0, 59) + '...'}</h3>
         <p>${price.toFixed(2)}</p>
       </div>
     </div>
