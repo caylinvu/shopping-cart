@@ -1,0 +1,64 @@
+.item-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.item-info {
+  width: 800px;
+}
+
+.item-top {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item-top img {
+  width: 200px;
+  margin: 10px 30px;
+}
+
+.item-top > div {
+  padding: 30px;
+}
+
+.item-top h2 {
+  font-size: 23px;
+}
+
+.item-top p {
+  font-size: 18px;
+  color: darkslategray;
+  margin-top: 10px;
+}
+
+.quantity {
+  margin: 15px 0;
+}
+
+.item-top button {
+  border: none;
+  background-color: #c56283;
+  color: white;
+  font-weight: 600;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.item-top button:hover {
+  cursor: pointer;
+}
+
+.item-bottom {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: solid 1px #dbdbdb;
+}
+
+.item-bottom p {
+  font-size: 18px;
+  color: darkslategray;
+  margin-top: 5px;
+}

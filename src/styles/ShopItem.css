@@ -37,10 +37,10 @@
 
 .txt-container h3 {
   font-size: 18.5px;
+  color: black;
 }
 
 .txt-container p {
-  /* margin-top: 10px; */
   color: darkslategray;
   font-size: 17px;
 }

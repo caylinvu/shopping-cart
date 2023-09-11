@@ -7,3 +7,8 @@
   max-width: 1500px;
   margin: auto;
 }
+
+.shop-items a {
+  display: flex;
+  text-decoration: none;
+}
