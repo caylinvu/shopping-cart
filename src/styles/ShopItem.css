@@ -1,5 +1,5 @@
 .shop-item {
-  width: 240px;
+  width: 230px;
   padding: 5px 0;
   background-color: white;
   border-radius: 5px;
@@ -14,14 +14,14 @@
 }
 
 .img-container {
-  height: 230px;
+  height: 221px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .shop-item img {
-  width: 165px;
+  width: 160px;
   padding: 10px;
 }
 

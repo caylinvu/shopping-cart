@@ -18,6 +18,10 @@
   color: darkslategray;
 }
 
+.introduction a {
+  margin-top: 10px;
+}
+
 .introduction button {
   border: none;
   background-color: #c56283;
@@ -26,7 +30,6 @@
   padding: 12px 25px;
   font-size: 18px;
   border-radius: 5px;
-  margin-top: 10px;
 }
 
 .introduction button:hover {

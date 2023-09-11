@@ -1,5 +1,5 @@
 import '../styles/Home.css';
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, Link } from 'react-router-dom';
 import ShopItem from './ShopItem';
 
 function Home() {
@@ -15,7 +15,9 @@ function Home() {
           hottest items on the market at unbeatable prices. We&apos;re here when you need us most.
           Shopaholics: for shopping addicts, by shopping addicts.
         </p>
-        <button>Shop Now</button>
+        <Link to="/shop">
+          <button>Shop Now</button>
+        </Link>
       </div>
       <div className="featured">
         <h2>Featured Items</h2>
