@@ -53,3 +53,8 @@
   justify-content: center;
   gap: 40px;
 }
+
+.featured-items a {
+  text-decoration: none;
+  display: flex;
+}
