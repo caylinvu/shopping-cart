@@ -41,9 +41,11 @@ export default App;
 
 // TO DO
 
-// create home page
+// add quantity input and incrementing buttons to item page
 
-// create shop page
+// finish styling item page
+
+// add ability to add items to cart
 
 // create cart page
 

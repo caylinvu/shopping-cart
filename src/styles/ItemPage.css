@@ -11,16 +11,30 @@
 .item-top {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 45px;
+}
+
+.img-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-top img {
   width: 200px;
-  margin: 10px 30px;
+  height: auto;
 }
 
 .item-top > div {
   padding: 30px;
+}
+
+.main-info {
+  min-width: 400px;
+  border: solid 1px #dbdbdb;
+  border-radius: 10px;
+  height: fit-content;
 }
 
 .item-top h2 {

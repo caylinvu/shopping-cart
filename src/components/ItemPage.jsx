@@ -12,8 +12,10 @@ function ItemPage() {
           return (
             <div key={obj.id} className="item-info">
               <div className="item-top">
-                <img src={obj.image} alt="" />
-                <div>
+                <div className="img-container2">
+                  <img src={obj.image} alt="" />
+                </div>
+                <div className="main-info">
                   <h2>{obj.title}</h2>
                   <p>${obj.price.toFixed(2)}</p>
                   <div className="quantity">quantity adjuster</div>
