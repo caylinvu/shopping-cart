@@ -20,7 +20,7 @@
 
 .introduction button {
   border: none;
-  background-color: rgb(197, 98, 131);
+  background-color: #c56283;
   color: white;
   font-weight: 600;
   padding: 12px 25px;
@@ -34,7 +34,7 @@
 }
 
 .featured {
-  background-color: #eeeeee;
+  background-color: #f3f3f3;
   text-align: center;
   padding: 40px 0;
   flex-grow: 1;
@@ -42,9 +42,11 @@
 
 .featured h2 {
   font-size: 30px;
+  margin-bottom: 30px;
 }
 
-/* .featured .items {
-  max-width: 1000px;
-  margin: auto;
-} */
+.featured-items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}

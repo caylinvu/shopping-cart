@@ -1,0 +1,43 @@
+.shop-item {
+  width: 240px;
+  padding: 5px 0;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px #c7c7c7;
+  overflow: hidden;
+}
+
+.shop-item:hover {
+  cursor: pointer;
+}
+
+.img-container {
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-item img {
+  width: 165px;
+  padding: 10px;
+}
+
+.txt-container {
+  text-align: left;
+  padding: 10px 20px;
+  background-color: white;
+  flex-grow: 1;
+}
+
+.txt-container h3 {
+  font-size: 18.5px;
+}
+
+.txt-container p {
+  margin-top: 10px;
+  color: darkslategray;
+  font-size: 17px;
+}

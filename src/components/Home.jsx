@@ -1,6 +1,10 @@
 import '../styles/Home.css';
+import { useOutletContext } from 'react-router-dom';
+import ShopItem from './ShopItem';
 
 function Home() {
+  const { items } = useOutletContext();
+
   return (
     <>
       <div className="introduction">
@@ -15,7 +19,11 @@ function Home() {
       </div>
       <div className="featured">
         <h2>Featured Items</h2>
-        {/* insert featured items here */}
+        <div className="featured-items">
+          {items.slice(0, 4).map((obj) => {
+            return <ShopItem key={obj.id} imgUrl={obj.image} title={obj.title} price={obj.price} />;
+          })}
+        </div>
       </div>
     </>
   );
