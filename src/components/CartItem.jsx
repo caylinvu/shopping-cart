@@ -59,6 +59,11 @@ function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSel
     }
   };
 
+  const deleteItem = () => {
+    let updatedItems = selectedItems.filter((obj) => obj.id != objId);
+    setSelectedItems(updatedItems);
+  };
+
   return (
     <div className="cart-item">
       <div className="img-container3">
@@ -82,7 +87,7 @@ function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSel
               <img src="/plus.svg" alt="" />
             </button>
           </div>
-          <button className="delete-btn">
+          <button className="delete-btn" onClick={deleteItem}>
             <img src="/delete.svg" alt="" />
           </button>
         </div>

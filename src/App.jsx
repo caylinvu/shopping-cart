@@ -55,8 +55,6 @@ export default App;
 
 // TO DO
 
-// add quantity functions to cart
-
 // add delete function to cart
 
 // create updateCart function for cart change to reduce redundant code (pass through updated quantity)
@@ -71,7 +69,9 @@ export default App;
 
 // maybe change item card border radius to 10px
 
-// maybe change how quantity works on cart page???
+// add style to button clicks
+
+// maybe add links to items on cart page (image and title)
 
 //
 
