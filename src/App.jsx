@@ -55,8 +55,6 @@ export default App;
 
 // TO DO
 
-// finish styling cart page
-
 // add quantity functions to cart
 
 // add delete function to cart
@@ -68,6 +66,8 @@ export default App;
 // make navbar stick to top when scrolling
 
 // add loading page and error stuff for api fetch
+
+// maybe change item card border radius to 10px
 
 //
 

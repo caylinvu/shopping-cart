@@ -8,20 +8,24 @@ function Cart() {
   return (
     <div className="cart">
       <h2>Your cart ({totalQuantity} items)</h2>
-      <div className="cart-items">
-        {selectedItems.map((obj) => {
-          return (
-            <CartItem
-              key={obj.id}
-              imgUrl={obj.image}
-              title={obj.title}
-              price={obj.price}
-              quantity={obj.quantity}
-            />
-          );
-        })}
-        <p className="checkout-total">Total: ${totalCost.toFixed(2)}</p>
+      <div className="cart-container">
+        <div className="cart-items">
+          {selectedItems.map((obj) => {
+            return (
+              <CartItem
+                key={obj.id}
+                imgUrl={obj.image}
+                title={obj.title}
+                price={obj.price}
+                quantity={obj.quantity}
+              />
+            );
+          })}
+        </div>
         <div className="checkout-container">
+          <p className="checkout-total">
+            Total: <span>${totalCost.toFixed(2)}</span>
+          </p>
           <button className="checkout-btn">Checkout</button>
         </div>
       </div>

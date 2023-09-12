@@ -32,7 +32,7 @@
 
 .main-info {
   min-width: 400px;
-  border: solid 1px #dbdbdb;
+  border: solid 2px #dbdbdb;
   border-radius: 10px;
   height: fit-content;
 }
@@ -53,7 +53,7 @@
 
 .increment-btn {
   border: none;
-  background-color: black;
+  background-color: #525252;
   color: white;
   width: 24px;
   height: 24px;
@@ -72,7 +72,7 @@
 }
 
 .quantity input {
-  border: solid 1px #dbdbdb;
+  border: solid 2px #dbdbdb;
   border-radius: 5px;
   margin: 0 10px;
   font-size: 18px;
@@ -107,7 +107,7 @@
 .item-bottom {
   margin-top: 25px;
   padding-top: 20px;
-  border-top: solid 1px #dbdbdb;
+  border-top: solid 2px #dbdbdb;
 }
 
 .item-bottom p {
