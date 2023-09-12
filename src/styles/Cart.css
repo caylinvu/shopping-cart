@@ -1,0 +1,38 @@
+.cart {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px 0;
+}
+
+.cart > h2 {
+  font-size: 28px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-total {
+  font-size: 18px;
+  text-align: right;
+}
+
+.checkout-btn {
+  border: none;
+  background-color: #c56283;
+  color: white;
+  font-weight: 600;
+  padding: 10px 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 200px;
+  float: right;
+}
+
+.checkout-btn {
+  cursor: pointer;
+}

@@ -1,0 +1,26 @@
+.cart-item {
+  display: flex;
+  box-shadow: 0 0 10px #c7c7c7;
+  border-radius: 10px;
+  width: 800px;
+}
+
+.img-container3 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container3 img {
+  width: 130px;
+  padding: 10px;
+}
+
+.cart-info {
+  padding: 20px;
+}
+
+.delete-btn img {
+  width: 20px;
+}

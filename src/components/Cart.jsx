@@ -1,7 +1,30 @@
+import { useOutletContext } from 'react-router-dom';
+import CartItem from './CartItem';
+import '../styles/Cart.css';
+
 function Cart() {
+  const { selectedItems, totalQuantity, totalCost } = useOutletContext();
+
   return (
-    <div className="cart-page">
-      <div>THIS IS THE CART PAGE</div>
+    <div className="cart">
+      <h2>Your cart ({totalQuantity} items)</h2>
+      <div className="cart-items">
+        {selectedItems.map((obj) => {
+          return (
+            <CartItem
+              key={obj.id}
+              imgUrl={obj.image}
+              title={obj.title}
+              price={obj.price}
+              quantity={obj.quantity}
+            />
+          );
+        })}
+        <p className="checkout-total">Total: ${totalCost.toFixed(2)}</p>
+        <div className="checkout-container">
+          <button className="checkout-btn">Checkout</button>
+        </div>
+      </div>
     </div>
   );
 }

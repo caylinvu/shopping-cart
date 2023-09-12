@@ -9,6 +9,7 @@ function App() {
   const [error, setError] = useState(null);
   const [selectedItems, setSelectedItems] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
+  const [totalCost, setTotalCost] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -31,16 +32,21 @@ function App() {
   }, []);
 
   useEffect(() => {
-    let result = selectedItems.reduce(function (total, obj) {
+    let quantity = selectedItems.reduce(function (total, obj) {
       return total + obj.quantity;
     }, 0);
-    setTotalQuantity(result);
+    setTotalQuantity(quantity);
+
+    let cost = selectedItems.reduce(function (total, obj) {
+      return total + obj.quantity * obj.price;
+    }, 0);
+    setTotalCost(cost);
   }, [selectedItems]);
 
   return (
     <>
       <NavBar totalQuantity={totalQuantity} />
-      <Outlet context={{ items, selectedItems, setSelectedItems }} />
+      <Outlet context={{ items, selectedItems, setSelectedItems, totalQuantity, totalCost }} />
     </>
   );
 }
@@ -49,15 +55,15 @@ export default App;
 
 // TO DO
 
-// finish styling item page
+// finish styling cart page
 
-// add ability to add items to cart
+// add quantity functions to cart
 
-//// display running quantity of items in cart on shopping cart
+// add delete function to cart
 
-//// display items in cart
+// if no items in cart, show message and add button to return to shopping
 
-// create cart page
+// make quantity component
 
 // make navbar stick to top when scrolling
 
