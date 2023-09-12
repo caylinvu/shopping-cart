@@ -8,6 +8,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -29,9 +30,16 @@ function App() {
     getData();
   }, []);
 
+  useEffect(() => {
+    let result = selectedItems.reduce(function (total, obj) {
+      return total + obj.quantity;
+    }, 0);
+    setTotalQuantity(result);
+  }, [selectedItems]);
+
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar totalQuantity={totalQuantity} />
       <Outlet context={{ items, selectedItems, setSelectedItems }} />
     </>
   );
@@ -43,11 +51,15 @@ export default App;
 
 // finish styling item page
 
-// disable add to cart button if there is no number in input field
-
 // add ability to add items to cart
 
+//// display running quantity of items in cart on shopping cart
+
+//// display items in cart
+
 // create cart page
+
+// make navbar stick to top when scrolling
 
 // add loading page and error stuff for api fetch
 
