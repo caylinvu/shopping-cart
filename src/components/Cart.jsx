@@ -3,7 +3,7 @@ import CartItem from './CartItem';
 import '../styles/Cart.css';
 
 function Cart() {
-  const { selectedItems, totalQuantity, totalCost } = useOutletContext();
+  const { selectedItems, setSelectedItems, totalQuantity, totalCost } = useOutletContext();
 
   return (
     <div className="cart">
@@ -14,10 +14,13 @@ function Cart() {
             return (
               <CartItem
                 key={obj.id}
+                objId={obj.id}
                 imgUrl={obj.image}
                 title={obj.title}
                 price={obj.price}
                 quantity={obj.quantity}
+                selectedItems={selectedItems}
+                setSelectedItems={setSelectedItems}
               />
             );
           })}

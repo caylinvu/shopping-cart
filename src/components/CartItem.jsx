@@ -1,7 +1,34 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import '../styles/CartItem.css';
 
-function CartItem({ imgUrl, title, price, quantity }) {
+function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSelectedItems }) {
+  const cartChange = (e) => {};
+
+  const cartDecrease = () => {
+    if (quantity > 1) {
+      let updatedItems = selectedItems.map((obj) => {
+        if (obj.id == objId) {
+          return { ...obj, quantity: obj.quantity - 1 };
+        } else {
+          return obj;
+        }
+      });
+      setSelectedItems(updatedItems);
+    }
+  };
+
+  const cartIncrease = () => {
+    let updatedItems = selectedItems.map((obj) => {
+      if (obj.id == objId) {
+        return { ...obj, quantity: obj.quantity + 1 };
+      } else {
+        return obj;
+      }
+    });
+    setSelectedItems(updatedItems);
+  };
+
   return (
     <div className="cart-item">
       <div className="img-container3">
@@ -17,11 +44,11 @@ function CartItem({ imgUrl, title, price, quantity }) {
         </div>
         <div className="more-info">
           <div className="quantity">
-            <button className="increment-btn">
+            <button className="increment-btn" onClick={cartDecrease}>
               <img src="/minus.svg" alt="" />
             </button>
-            <input type="text" value={quantity} pattern="^[0-9]*$" />
-            <button className="increment-btn">
+            <input type="text" value={quantity} pattern="^[0-9]*$" onChange={cartChange} />
+            <button className="increment-btn" onClick={cartIncrease}>
               <img src="/plus.svg" alt="" />
             </button>
           </div>
@@ -35,10 +62,13 @@ function CartItem({ imgUrl, title, price, quantity }) {
 }
 
 CartItem.propTypes = {
+  objId: PropTypes.number,
   imgUrl: PropTypes.string,
   title: PropTypes.string,
   price: PropTypes.number,
   quantity: PropTypes.number,
+  selectedItems: PropTypes.array,
+  setSelectedItems: PropTypes.func,
 };
 
 export default CartItem;
