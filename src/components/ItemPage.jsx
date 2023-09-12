@@ -5,7 +5,7 @@ import '../styles/ItemPage.css';
 function ItemPage() {
   const [quantity, setQuantity] = useState(1);
   const [isDisabled, setIsDisabled] = useState(false);
-  const { items } = useOutletContext();
+  const { items, selectedItems, setSelectedItems } = useOutletContext();
   const { item } = useParams();
 
   const handleInput = (e) => {
@@ -33,6 +33,22 @@ function ItemPage() {
     }
   };
 
+  const addItem = (desiredItem) => {
+    if (selectedItems.some((obj) => obj.id == desiredItem.id)) {
+      let updatedItems = selectedItems.map((obj) => {
+        if (obj.id == desiredItem.id) {
+          return { ...obj, quantity: obj.quantity + quantity };
+        } else {
+          return obj;
+        }
+      });
+      setSelectedItems(updatedItems);
+    } else {
+      let newItem = { ...desiredItem, quantity: quantity };
+      setSelectedItems([...selectedItems, newItem]);
+    }
+  };
+
   return (
     <div className="item-page">
       {items.map((obj) => {
@@ -55,7 +71,7 @@ function ItemPage() {
                       <img src="/plus.svg" alt="" />
                     </button>
                   </div>
-                  <button className="add-btn" disabled={isDisabled}>
+                  <button className="add-btn" disabled={isDisabled} onClick={() => addItem(obj)}>
                     Add to Cart
                   </button>
                 </div>

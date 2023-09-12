@@ -7,7 +7,7 @@ function App() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedItems, setSelectedItems] = useState(null);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
-      <Outlet context={{ items, selectedItems }} />
+      <Outlet context={{ items, selectedItems, setSelectedItems }} />
     </>
   );
 }
