@@ -41,9 +41,9 @@ export default App;
 
 // TO DO
 
-// add quantity input and incrementing buttons to item page
-
 // finish styling item page
+
+// disable add to cart button if there is no number in input field
 
 // add ability to add items to cart
 

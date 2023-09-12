@@ -62,6 +62,10 @@
   vertical-align: middle;
 }
 
+.increment-btn:hover {
+  cursor: pointer;
+}
+
 .increment-btn img {
   filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(148deg) brightness(113%) contrast(101%);
   width: 20px;
@@ -81,11 +85,6 @@
   box-shadow: 0px 0px 4px #1495ff;
 }
 
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-} */
-
 .add-btn {
   border: none;
   background-color: #c56283;
@@ -96,8 +95,13 @@ input::-webkit-inner-spin-button {
   border-radius: 5px;
 }
 
-.item-top button:hover {
+.add-btn:hover {
   cursor: pointer;
+}
+
+.add-btn:disabled {
+  background-color: #e6aec1;
+  cursor: not-allowed;
 }
 
 .item-bottom {

@@ -4,14 +4,17 @@ import '../styles/ItemPage.css';
 
 function ItemPage() {
   const [quantity, setQuantity] = useState(1);
+  const [isDisabled, setIsDisabled] = useState(false);
   const { items } = useOutletContext();
   const { item } = useParams();
 
   const handleInput = (e) => {
     if (e.target.value > 0) {
       setQuantity(Number(e.target.value));
+      setIsDisabled(false);
     } else if (e.target.value == '' || e.target.value == 0) {
       setQuantity('');
+      setIsDisabled(true);
     }
   };
 
@@ -24,6 +27,7 @@ function ItemPage() {
   const handleIncrease = () => {
     if (quantity == '') {
       setQuantity(Number(1));
+      setIsDisabled(false);
     } else {
       setQuantity(quantity + 1);
     }
@@ -51,7 +55,9 @@ function ItemPage() {
                       <img src="/plus.svg" alt="" />
                     </button>
                   </div>
-                  <button className="add-btn">Add to Cart</button>
+                  <button className="add-btn" disabled={isDisabled}>
+                    Add to Cart
+                  </button>
                 </div>
               </div>
               <div className="item-bottom">
