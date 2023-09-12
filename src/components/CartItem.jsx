@@ -1,9 +1,28 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import '../styles/CartItem.css';
 
 function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSelectedItems }) {
-  const cartChange = (e) => {};
+  const cartChange = (e) => {
+    if (e.target.value > 0) {
+      let updatedItems = selectedItems.map((obj) => {
+        if (obj.id == objId) {
+          return { ...obj, quantity: Number(e.target.value) };
+        } else {
+          return obj;
+        }
+      });
+      setSelectedItems(updatedItems);
+    } else if (e.target.value == '' || e.target.value == 0) {
+      let updatedItems = selectedItems.map((obj) => {
+        if (obj.id == objId) {
+          return { ...obj, quantity: '' };
+        } else {
+          return obj;
+        }
+      });
+      setSelectedItems(updatedItems);
+    }
+  };
 
   const cartDecrease = () => {
     if (quantity > 1) {
@@ -19,14 +38,25 @@ function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSel
   };
 
   const cartIncrease = () => {
-    let updatedItems = selectedItems.map((obj) => {
-      if (obj.id == objId) {
-        return { ...obj, quantity: obj.quantity + 1 };
-      } else {
-        return obj;
-      }
-    });
-    setSelectedItems(updatedItems);
+    if (quantity == '') {
+      let updatedItems = selectedItems.map((obj) => {
+        if (obj.id == objId) {
+          return { ...obj, quantity: Number(1) };
+        } else {
+          return obj;
+        }
+      });
+      setSelectedItems(updatedItems);
+    } else {
+      let updatedItems = selectedItems.map((obj) => {
+        if (obj.id == objId) {
+          return { ...obj, quantity: obj.quantity + 1 };
+        } else {
+          return obj;
+        }
+      });
+      setSelectedItems(updatedItems);
+    }
   };
 
   return (

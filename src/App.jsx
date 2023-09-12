@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     let quantity = selectedItems.reduce(function (total, obj) {
-      return total + obj.quantity;
+      return total + Number(obj.quantity);
     }, 0);
     setTotalQuantity(quantity);
 
@@ -59,6 +59,8 @@ export default App;
 
 // add delete function to cart
 
+// create updateCart function for cart change to reduce redundant code (pass through updated quantity)
+
 // if no items in cart, show message and add button to return to shopping
 
 // make quantity component
@@ -68,6 +70,8 @@ export default App;
 // add loading page and error stuff for api fetch
 
 // maybe change item card border radius to 10px
+
+// maybe change how quantity works on cart page???
 
 //
 
