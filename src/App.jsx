@@ -1,4 +1,5 @@
 import './styles/App.css';
+import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/NavBar';
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <NavBar totalQuantity={totalQuantity} />
       <Outlet context={{ items, selectedItems, setSelectedItems, totalQuantity, totalCost }} />
     </>
