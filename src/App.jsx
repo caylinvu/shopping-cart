@@ -57,8 +57,6 @@ export default App;
 
 // TO DO
 
-// maybe add links to items on cart page (image and title)
-
 // maybe add colors and borders to var properties
 
 // make responsive

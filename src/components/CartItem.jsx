@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import '../styles/CartItem.css';
 
 function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSelectedItems }) {
@@ -76,12 +77,16 @@ function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSel
   return (
     <div className="cart-item">
       <div className="img-container3">
-        <img src={imgUrl} alt="" />
+        <Link to={'/shop/' + objId}>
+          <img src={imgUrl} alt="" />
+        </Link>
       </div>
       <div className="cart-info">
         <div className="price-info">
           <div className="singular">
-            <h3>{title}</h3>
+            <Link to={'/shop/' + objId}>
+              <h3>{title}</h3>
+            </Link>
             <p>${price.toFixed(2)}</p>
           </div>
           <div className="multiplied">${(quantity * price).toFixed(2)}</div>

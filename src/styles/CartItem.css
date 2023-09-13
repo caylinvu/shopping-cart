@@ -5,6 +5,10 @@
   width: 600px;
 }
 
+.cart-item a {
+  text-decoration: none;
+}
+
 .img-container3 {
   padding: 20px;
   display: flex;
@@ -15,6 +19,7 @@
 .img-container3 img {
   width: 130px;
   padding: 10px;
+  display: block;
 }
 
 .cart-info {
@@ -31,7 +36,8 @@
   gap: 30px;
 }
 
-.singular > h3 {
+.singular h3 {
+  color: black;
   font-weight: 600;
   margin-bottom: 10px;
 }
