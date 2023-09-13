@@ -39,7 +39,11 @@ function ItemPage() {
     if (selectedItems.some((obj) => obj.id == desiredItem.id)) {
       let updatedItems = selectedItems.map((obj) => {
         if (obj.id == desiredItem.id) {
-          return { ...obj, quantity: obj.quantity + quantity };
+          let tmpQuantity = Number(obj.quantity) + Number(quantity);
+          if (tmpQuantity > 99) {
+            return { ...obj, quantity: Number(99) };
+          }
+          return { ...obj, quantity: tmpQuantity };
         } else {
           return obj;
         }
