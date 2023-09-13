@@ -1,7 +1,7 @@
 .shop-item {
   width: 250px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px #c7c7c7;

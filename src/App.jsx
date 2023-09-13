@@ -57,15 +57,13 @@ export default App;
 
 // TO DO
 
-// make clicking link jump to top of page
-
-// maybe change item card border radius to 10px
-
 // add style to button clicks
 
 // maybe add a max input to fields
 
 // maybe add links to items on cart page (image and title)
+
+// maybe add colors and borders to var properties
 
 // make responsive
 
