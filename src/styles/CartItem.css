@@ -2,7 +2,7 @@
   display: flex;
   border: solid 2px #dbdbdb;
   border-radius: 10px;
-  max-width: 600px;
+  width: 600px;
 }
 
 .img-container3 {

@@ -71,7 +71,13 @@ export default App;
 
 // add style to button clicks
 
+// maybe add a max input to fields
+
 // maybe add links to items on cart page (image and title)
+
+// refactor code and break things out into more components
+
+// make responsive
 
 //
 

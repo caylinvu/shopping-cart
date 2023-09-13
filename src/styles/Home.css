@@ -1,6 +1,6 @@
 .introduction {
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
   padding: 40px 100px;
   display: flex;
   flex-direction: column;
