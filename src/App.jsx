@@ -55,17 +55,7 @@ export default App;
 
 // TO DO
 
-// add delete function to cart
-
-// create updateCart function for cart change to reduce redundant code (pass through updated quantity)
-
-// if no items in cart, show message and add button to return to shopping
-
-// make quantity component
-
-// make navbar stick to top when scrolling
-
-// add loading page and error stuff for api fetch
+// make clicking link jump to top of page
 
 // maybe change item card border radius to 10px
 
@@ -75,9 +65,15 @@ export default App;
 
 // maybe add links to items on cart page (image and title)
 
+// make responsive
+
+// add loading page and error stuff for api fetch
+
 // refactor code and break things out into more components
 
-// make responsive
+// create updateCart function for cart change to reduce redundant code (pass through updated quantity)
+
+// make quantity component
 
 //
 
