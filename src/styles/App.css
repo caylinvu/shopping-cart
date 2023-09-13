@@ -3,3 +3,13 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+button,
+.header a {
+  transition: transform, 0.15s, linear, 0.15s;
+}
+
+button:active,
+.header a:active {
+  transform: scale(0.95);
+}

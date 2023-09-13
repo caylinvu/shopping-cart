@@ -57,8 +57,6 @@ export default App;
 
 // TO DO
 
-// add style to button clicks
-
 // maybe add a max input to fields
 
 // maybe add links to items on cart page (image and title)
