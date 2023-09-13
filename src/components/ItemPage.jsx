@@ -9,9 +9,11 @@ function ItemPage() {
   const { item } = useParams();
 
   const handleInput = (e) => {
-    if (e.target.value > 0) {
+    if (e.target.value > 0 && e.target.value <= 99) {
       setQuantity(Number(e.target.value));
       setIsDisabled(false);
+    } else if (e.target.value > 99) {
+      setQuantity(Number(99));
     } else if (e.target.value == '' || e.target.value == 0) {
       setQuantity('');
       setIsDisabled(true);
@@ -28,7 +30,7 @@ function ItemPage() {
     if (quantity == '') {
       setQuantity(Number(1));
       setIsDisabled(false);
-    } else {
+    } else if (quantity < 99) {
       setQuantity(quantity + 1);
     }
   };

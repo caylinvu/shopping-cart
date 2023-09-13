@@ -3,10 +3,19 @@ import '../styles/CartItem.css';
 
 function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSelectedItems }) {
   const cartChange = (e) => {
-    if (e.target.value > 0) {
+    if (e.target.value > 0 && e.target.value <= 99) {
       let updatedItems = selectedItems.map((obj) => {
         if (obj.id == objId) {
           return { ...obj, quantity: Number(e.target.value) };
+        } else {
+          return obj;
+        }
+      });
+      setSelectedItems(updatedItems);
+    } else if (e.target.value > 99) {
+      let updatedItems = selectedItems.map((obj) => {
+        if (obj.id == objId) {
+          return { ...obj, quantity: Number(99) };
         } else {
           return obj;
         }
@@ -47,7 +56,7 @@ function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSel
         }
       });
       setSelectedItems(updatedItems);
-    } else {
+    } else if (quantity < 99) {
       let updatedItems = selectedItems.map((obj) => {
         if (obj.id == objId) {
           return { ...obj, quantity: obj.quantity + 1 };
