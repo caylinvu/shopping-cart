@@ -113,5 +113,10 @@
 .item-bottom p {
   font-size: 18px;
   color: darkslategray;
-  margin-top: 5px;
+  padding: 5px 0 3px;
+}
+
+.item-bottom p:last-child {
+  font-size: 17px;
+  font-weight: 600;
 }

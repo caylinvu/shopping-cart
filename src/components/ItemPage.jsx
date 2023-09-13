@@ -85,6 +85,7 @@ function ItemPage() {
               <div className="item-bottom">
                 <h3>Description</h3>
                 <p>{obj.description}</p>
+                <p>***Maximum quantity of 99 per item allowed in cart</p>
               </div>
             </div>
           );
