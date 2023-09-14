@@ -114,9 +114,45 @@
   font-size: 18px;
   color: darkslategray;
   padding: 5px 0 3px;
+  overflow-wrap: break-word;
 }
 
 .item-bottom p:last-child {
   font-size: 17px;
   font-weight: 600;
+}
+
+@media (max-width: 730px) {
+  .item-info {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .item-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item-top > div:first-child {
+    padding: 0 0 20px;
+  }
+
+  .main-info {
+    min-width: auto;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 400px) {
+  .item-info {
+    min-width: 270px;
+  }
+
+  .item-page {
+    padding: 40px 20px;
+  }
+
+  .item-top > div:last-child {
+    padding: 20px 15px;
+  }
 }

@@ -24,6 +24,7 @@ function NavBar({ totalQuantity, showMenu, toggleMenu }) {
       <div className={showMenu ? 'dropdown show' : 'dropdown'}>
         <Link to="/">Home</Link>
         <Link to="/shop">Shop</Link>
+        <Link to="/cart">Cart</Link>
       </div>
     </div>
   );

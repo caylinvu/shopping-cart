@@ -114,3 +114,9 @@ a:hover {
     padding: 10px;
   }
 }
+
+@media (max-width: 340px) {
+  .nav-items > a:nth-child(3) {
+    display: none;
+  }
+}

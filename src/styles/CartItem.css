@@ -2,7 +2,7 @@
   display: flex;
   border: solid 2px #dbdbdb;
   border-radius: 10px;
-  width: 600px;
+  max-width: 600px;
 }
 
 .cart-item a {
@@ -76,4 +76,40 @@
 .delete-btn img {
   width: 23px;
   filter: invert(30%) sepia(0%) saturate(0%) hue-rotate(319deg) brightness(99%) contrast(86%);
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 440px) {
+  .cart-info {
+    text-align: center;
+  }
+
+  .more-info {
+    justify-content: center;
+  }
+
+  .price-info {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .singular > p {
+    display: none;
+  }
+
+  .cart-item {
+    position: relative;
+  }
+
+  .delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 }

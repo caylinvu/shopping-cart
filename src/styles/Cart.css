@@ -5,7 +5,7 @@
 
 .cart,
 .empty-cart {
-  padding: 35px 0 50px;
+  padding: 35px 35px 50px;
 }
 
 .cart > h2,
@@ -87,4 +87,37 @@
 
 .empty-cart button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .cart h2 {
+    text-align: center;
+  }
+
+  .cart-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cart-container > div:first-child {
+    order: 2;
+  }
+
+  .checkout-container {
+    text-align: center;
+    background-color: white;
+    position: static;
+  }
+}
+
+@media (max-width: 650px) {
+  .empty-cart {
+    width: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  .cart {
+    padding: 35px 15px 50px;
+  }
 }
