@@ -11,6 +11,7 @@ function App() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -44,10 +45,14 @@ function App() {
     setTotalCost(cost);
   }, [selectedItems]);
 
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <>
-      <ScrollToTop />
-      <NavBar totalQuantity={totalQuantity} />
+      <ScrollToTop setShowMenu={setShowMenu} />
+      <NavBar totalQuantity={totalQuantity} showMenu={showMenu} toggleMenu={toggleMenu} />
       <Outlet context={{ items, selectedItems, setSelectedItems, totalQuantity, totalCost }} />
     </>
   );
@@ -57,11 +62,13 @@ export default App;
 
 // TO DO
 
-// maybe add colors and borders to var properties
+// figure out right way to do toggle menu thing
 
 // make responsive
 
 // add loading page and error stuff for api fetch
+
+// maybe store frequently used colors/borders to var properties
 
 // refactor code and break things out into more components
 
@@ -69,8 +76,4 @@ export default App;
 
 // make quantity component
 
-//
-
-// STYLING
-
-//
+// maybe add checkout function that clears cart???

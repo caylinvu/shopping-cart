@@ -1,13 +1,15 @@
 .header {
-  display: flex;
-  justify-content: space-between;
   padding: 16px 24px;
-  position: relative;
   box-shadow: 0 0 10px rgb(190, 190, 190);
   background-color: white;
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .shop-name {
@@ -61,4 +63,54 @@
 
 a:hover {
   cursor: pointer;
+}
+
+.menu-btn,
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .nav-items > a:nth-child(1),
+  .nav-items > a:nth-child(2) {
+    display: none;
+  }
+
+  .nav-items {
+    gap: 30px;
+  }
+
+  .menu-btn {
+    display: flex;
+    background-color: white;
+    border: none;
+  }
+
+  .menu-btn:hover {
+    cursor: pointer;
+  }
+
+  .menu-btn img {
+    width: 25px;
+  }
+
+  .dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-top: solid 2px #e7e7e7;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .dropdown a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+  }
 }
