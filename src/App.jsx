@@ -73,8 +73,7 @@ export default App;
 // TO DO
 
 // refactor code and break things out into more components
-
-// make error/loading page components on home and shop pages
+//// Checkout, EmptyCart
 
 // create updateCart function for cart change to reduce redundant code (pass through updated quantity)
 //// on cartItem and itemPage
