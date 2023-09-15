@@ -79,5 +79,3 @@ export default App;
 // create updateCart function for cart change to reduce redundant code (pass through updated quantity)
 
 // make quantity component
-
-// maybe add checkout function that clears cart and returns to homepage??

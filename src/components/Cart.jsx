@@ -5,6 +5,10 @@ import '../styles/Cart.css';
 function Cart() {
   const { selectedItems, setSelectedItems, totalQuantity, totalCost } = useOutletContext();
 
+  const clearCart = () => {
+    setSelectedItems([]);
+  };
+
   return (
     <div className="cart-page">
       {selectedItems.length > 0 ? (
@@ -31,7 +35,9 @@ function Cart() {
               <p className="checkout-total">
                 Total: <span>${totalCost.toFixed(2)}</span>
               </p>
-              <button className="checkout-btn">Checkout</button>
+              <button className="checkout-btn" onClick={clearCart}>
+                Checkout
+              </button>
             </div>
           </div>
         </div>
