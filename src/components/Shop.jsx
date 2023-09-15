@@ -1,6 +1,8 @@
 import { useOutletContext, Link } from 'react-router-dom';
 import ShopItem from './ShopItem';
 import '../styles/Shop.css';
+import Loading from './Loading';
+import Error from './Error';
 
 function Shop() {
   const { items, loading, error } = useOutletContext();
@@ -8,11 +10,9 @@ function Shop() {
   return (
     <div className="shop-items">
       {loading ? (
-        <img src="/loading.svg" alt="" className="loading" />
+        <Loading />
       ) : error ? (
-        <div className="error">
-          There is a problem fetching the shop data - {error}. Please try again.
-        </div>
+        <Error error={error} />
       ) : (
         <>
           {items.map((obj) => {

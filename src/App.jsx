@@ -74,8 +74,9 @@ export default App;
 
 // refactor code and break things out into more components
 
-// make error/loading page components
+// make error/loading page components on home and shop pages
 
 // create updateCart function for cart change to reduce redundant code (pass through updated quantity)
+//// on cartItem and itemPage
 
 // maybe store frequently used colors/borders to var properties
