@@ -1,0 +1,37 @@
+.quantity {
+  margin: 15px 0;
+}
+
+.increment-btn {
+  border: none;
+  background-color: #525252;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-size: 22px;
+  border-radius: 50px;
+  vertical-align: middle;
+}
+
+.increment-btn:hover {
+  cursor: pointer;
+}
+
+.increment-btn img {
+  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(148deg) brightness(113%) contrast(101%);
+  width: 20px;
+}
+
+.quantity input {
+  border: solid 2px #dbdbdb;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-size: 18px;
+  text-align: center;
+  width: 100px;
+}
+
+.quantity input:focus {
+  outline: 1px solid #1495ff;
+  box-shadow: 0px 0px 4px #1495ff;
+}

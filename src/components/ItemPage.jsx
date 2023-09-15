@@ -1,6 +1,7 @@
 import { useParams, useOutletContext } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/ItemPage.css';
+import QuantityAdjuster from './QuantityAdjuster';
 
 function ItemPage() {
   const [quantity, setQuantity] = useState(1);
@@ -8,7 +9,7 @@ function ItemPage() {
   const { items, selectedItems, setSelectedItems } = useOutletContext();
   const { item } = useParams();
 
-  const handleInput = (e) => {
+  const itemChange = (e) => {
     if (e.target.value > 0 && e.target.value <= 99) {
       setQuantity(Number(e.target.value));
       setIsDisabled(false);
@@ -20,13 +21,13 @@ function ItemPage() {
     }
   };
 
-  const handleDecrease = () => {
+  const itemDecrease = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
 
-  const handleIncrease = () => {
+  const itemIncrease = () => {
     if (quantity == '') {
       setQuantity(Number(1));
       setIsDisabled(false);
@@ -68,15 +69,12 @@ function ItemPage() {
                 <div className="main-info">
                   <h2>{obj.title}</h2>
                   <p>${obj.price.toFixed(2)}</p>
-                  <div className="quantity">
-                    <button className="increment-btn" onClick={handleDecrease}>
-                      <img src="/minus.svg" alt="" />
-                    </button>
-                    <input type="text" value={quantity} pattern="^[0-9]*$" onChange={handleInput} />
-                    <button className="increment-btn" onClick={handleIncrease}>
-                      <img src="/plus.svg" alt="" />
-                    </button>
-                  </div>
+                  <QuantityAdjuster
+                    quantity={quantity}
+                    handleDecrease={itemDecrease}
+                    handleInput={itemChange}
+                    handleIncrease={itemIncrease}
+                  />
                   <button className="add-btn" disabled={isDisabled} onClick={() => addItem(obj)}>
                     Add to Cart
                   </button>

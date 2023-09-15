@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/CartItem.css';
+import QuantityAdjuster from './QuantityAdjuster';
 
 function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSelectedItems }) {
   const cartChange = (e) => {
@@ -92,15 +93,12 @@ function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSel
           <div className="multiplied">${(quantity * price).toFixed(2)}</div>
         </div>
         <div className="more-info">
-          <div className="quantity">
-            <button className="increment-btn" onClick={cartDecrease}>
-              <img src="/minus.svg" alt="" />
-            </button>
-            <input type="text" value={quantity} pattern="^[0-9]*$" onChange={cartChange} />
-            <button className="increment-btn" onClick={cartIncrease}>
-              <img src="/plus.svg" alt="" />
-            </button>
-          </div>
+          <QuantityAdjuster
+            quantity={quantity}
+            handleDecrease={cartDecrease}
+            handleInput={cartChange}
+            handleIncrease={cartIncrease}
+          />
           <button className="delete-btn" onClick={deleteItem}>
             <img src="/delete.svg" alt="" />
           </button>
@@ -115,7 +113,7 @@ CartItem.propTypes = {
   imgUrl: PropTypes.string,
   title: PropTypes.string,
   price: PropTypes.number,
-  quantity: PropTypes.number,
+  quantity: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   selectedItems: PropTypes.array,
   setSelectedItems: PropTypes.func,
 };

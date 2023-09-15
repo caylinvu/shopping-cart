@@ -72,10 +72,10 @@ export default App;
 
 // TO DO
 
-// maybe store frequently used colors/borders to var properties
-
 // refactor code and break things out into more components
+
+// make error/loading page components
 
 // create updateCart function for cart change to reduce redundant code (pass through updated quantity)
 
-// make quantity component
+// maybe store frequently used colors/borders to var properties
