@@ -43,6 +43,22 @@
   flex-grow: 1;
 }
 
+.loading {
+  width: 100px;
+  animation: animate 1s linear infinite;
+  margin-top: 75px;
+}
+
+.error {
+  font-size: 19px;
+  color: darkslategray;
+  text-align: center;
+}
+
+.featured .error {
+  padding: 0 20px;
+}
+
 .featured h2 {
   font-size: 30px;
   margin-bottom: 30px;
@@ -58,4 +74,13 @@
 .featured-items a {
   text-decoration: none;
   display: flex;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

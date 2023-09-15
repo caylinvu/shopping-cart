@@ -3,7 +3,7 @@ import { useOutletContext, Link } from 'react-router-dom';
 import ShopItem from './ShopItem';
 
 function Home() {
-  const { items } = useOutletContext();
+  const { items, loading, error } = useOutletContext();
 
   return (
     <>
@@ -21,16 +21,24 @@ function Home() {
       </div>
       <div className="featured">
         <h2>Featured Items</h2>
-        <div className="featured-items">
-          {items.slice(0, 4).map((obj) => {
-            let link = '/shop/' + obj.id;
-            return (
-              <Link to={link} key={obj.id}>
-                <ShopItem imgUrl={obj.image} title={obj.title} price={obj.price} />
-              </Link>
-            );
-          })}
-        </div>
+        {loading ? (
+          <img src="/loading.svg" alt="" className="loading" />
+        ) : error ? (
+          <div className="error">
+            There is a problem fetching the shop data - {error}. Please try again.
+          </div>
+        ) : (
+          <div className="featured-items">
+            {items.slice(0, 4).map((obj) => {
+              let link = '/shop/' + obj.id;
+              return (
+                <Link to={link} key={obj.id}>
+                  <ShopItem imgUrl={obj.image} title={obj.title} price={obj.price} />
+                </Link>
+              );
+            })}
+          </div>
+        )}
       </div>
     </>
   );

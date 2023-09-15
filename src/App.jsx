@@ -53,7 +53,17 @@ function App() {
     <>
       <ScrollToTop setShowMenu={setShowMenu} />
       <NavBar totalQuantity={totalQuantity} showMenu={showMenu} toggleMenu={toggleMenu} />
-      <Outlet context={{ items, selectedItems, setSelectedItems, totalQuantity, totalCost }} />
+      <Outlet
+        context={{
+          items,
+          selectedItems,
+          setSelectedItems,
+          totalQuantity,
+          totalCost,
+          loading,
+          error,
+        }}
+      />
     </>
   );
 }
@@ -61,12 +71,6 @@ function App() {
 export default App;
 
 // TO DO
-
-// figure out right way to do toggle menu thing
-
-// make responsive
-
-// add loading page and error stuff for api fetch
 
 // maybe store frequently used colors/borders to var properties
 
@@ -76,4 +80,4 @@ export default App;
 
 // make quantity component
 
-// maybe add checkout function that clears cart???
+// maybe add checkout function that clears cart and returns to homepage??
