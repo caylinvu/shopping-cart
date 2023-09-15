@@ -1,8 +1,8 @@
-import { useOutletContext, Link } from 'react-router-dom';
-import ShopItem from './ShopItem';
+import { useOutletContext } from 'react-router-dom';
 import '../styles/Shop.css';
 import Loading from './Loading';
 import Error from './Error';
+import ShopItem from './ShopItem';
 
 function Shop() {
   const { items, loading, error } = useOutletContext();
@@ -17,9 +17,13 @@ function Shop() {
         <>
           {items.map((obj) => {
             return (
-              <Link to={'/shop/' + obj.id} key={obj.id}>
-                <ShopItem imgUrl={obj.image} title={obj.title} price={obj.price} />
-              </Link>
+              <ShopItem
+                key={obj.id}
+                objId={obj.id}
+                imgUrl={obj.image}
+                title={obj.title}
+                price={obj.price}
+              />
             );
           })}
         </>
