@@ -1,3 +1,16 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #f3f3f3;
+  --button-color1: #c56283;
+  --button-color2: #e6aec1;
+  --button-color3: #525252;
+  --text-color1: #000000;
+  --text-color2: #2f4f4f;
+  --text-color3: #008000;
+  --border: solid 2px #dbdbdb;
+  --outline-color: #1495ff;
+}
+
 #root {
   display: flex;
   flex-direction: column;

@@ -15,7 +15,7 @@
 
 .introduction p {
   font-size: 19px;
-  color: darkslategray;
+  color: var(--text-color2);
 }
 
 .introduction a {
@@ -24,8 +24,8 @@
 
 .introduction button {
   border: none;
-  background-color: #c56283;
-  color: white;
+  background-color: var(--button-color1);
+  color: var(--primary-color);
   font-weight: 600;
   padding: 12px 25px;
   font-size: 18px;
@@ -37,7 +37,7 @@
 }
 
 .featured {
-  background-color: #f3f3f3;
+  background-color: var(--secondary-color);
   text-align: center;
   padding: 40px 0;
   flex-grow: 1;
@@ -51,7 +51,7 @@
 
 .error {
   font-size: 19px;
-  color: darkslategray;
+  color: var(--text-color2);
   text-align: center;
 }
 

@@ -4,8 +4,8 @@
 
 .increment-btn {
   border: none;
-  background-color: #525252;
-  color: white;
+  background-color: var(--button-color3);
+  color: var(--primary-color);
   width: 24px;
   height: 24px;
   font-size: 22px;
@@ -23,7 +23,7 @@
 }
 
 .quantity input {
-  border: solid 2px #dbdbdb;
+  border: var(--border);
   border-radius: 5px;
   margin: 0 10px;
   font-size: 18px;
@@ -32,6 +32,6 @@
 }
 
 .quantity input:focus {
-  outline: 1px solid #1495ff;
-  box-shadow: 0px 0px 4px #1495ff;
+  outline: 1px solid var(--outline-color);
+  box-shadow: 0px 0px 4px var(--outline-color);
 }

@@ -1,6 +1,6 @@
 .cart-item {
   display: flex;
-  border: solid 2px #dbdbdb;
+  border: var(--border);
   border-radius: 10px;
   max-width: 600px;
 }
@@ -37,20 +37,20 @@
 }
 
 .singular h3 {
-  color: black;
+  color: var(--text-color1);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .singular > p {
   font-size: 17px;
-  color: darkslategray;
+  color: var(--text-color2);
 }
 
 .multiplied {
   font-size: 18px;
   font-weight: 600;
-  color: green;
+  color: var(--text-color3);
 }
 
 .more-info {
@@ -63,7 +63,7 @@
   display: flex;
   align-items: center;
   border: none;
-  background-color: white;
+  background-color: var(--primary-color);
   padding: 3px;
   border-radius: 5px;
 }

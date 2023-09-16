@@ -1,6 +1,6 @@
 .shop-item {
   width: 250px;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
 .txt-container {
   text-align: left;
   padding: 15px 20px;
-  background-color: #f3f3f3;
+  background-color: var(--secondary-color);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -37,10 +37,10 @@
 
 .txt-container h3 {
   font-size: 18.5px;
-  color: black;
+  color: var(--text-color1);
 }
 
 .txt-container p {
-  color: darkslategray;
+  color: var(--text-color2);
   font-size: 17px;
 }

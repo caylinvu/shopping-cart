@@ -69,10 +69,3 @@ function App() {
 }
 
 export default App;
-
-// TO DO
-
-// create updateCart function for cart change to reduce redundant code (pass through updated quantity)
-//// on cartItem and itemPage
-
-// maybe store frequently used colors/borders to var properties

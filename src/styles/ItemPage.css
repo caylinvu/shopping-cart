@@ -32,7 +32,7 @@
 
 .main-info {
   min-width: 400px;
-  border: solid 2px #dbdbdb;
+  border: var(--border);
   border-radius: 10px;
   height: fit-content;
 }
@@ -43,13 +43,13 @@
 
 .item-top p {
   font-size: 18px;
-  color: darkslategray;
+  color: var(--text-color2);
   margin-top: 10px;
 }
 
 .add-btn {
   border: none;
-  background-color: #c56283;
+  background-color: var(--button-color1);
   color: white;
   font-weight: 600;
   padding: 10px 40px;
@@ -62,19 +62,19 @@
 }
 
 .add-btn:disabled {
-  background-color: #e6aec1;
+  background-color: var(--button-color2);
   cursor: not-allowed;
 }
 
 .item-bottom {
   margin-top: 25px;
   padding-top: 20px;
-  border-top: solid 2px #dbdbdb;
+  border-top: var(--border);
 }
 
 .item-bottom p {
   font-size: 18px;
-  color: darkslategray;
+  color: var(--text-color2);
   padding: 5px 0 3px;
   overflow-wrap: break-word;
 }

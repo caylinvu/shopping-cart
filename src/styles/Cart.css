@@ -27,7 +27,7 @@
 }
 
 .checkout-container {
-  border: solid 2px #dbdbdb;
+  border: var(--border);
   border-radius: 10px;
   height: fit-content;
   padding: 25px;
@@ -43,13 +43,13 @@
 }
 
 .checkout-total > span {
-  color: green;
+  color: var(--text-color3);
 }
 
 .checkout-btn {
   border: none;
-  background-color: #c56283;
-  color: white;
+  background-color: var(--button-color1);
+  color: var(--primary-color);
   font-weight: 600;
   padding: 10px 60px;
   font-size: 18px;
@@ -66,19 +66,19 @@
 }
 
 .empty-cart > h2 {
-  border-bottom: solid 2px #dbdbdb;
+  border-bottom: var(--border);
 }
 
 .empty-cart > p {
   font-size: 20px;
-  color: darkslategray;
+  color: var(--text-color2);
   padding: 40px 0;
 }
 
 .empty-cart button {
   border: none;
-  background-color: #c56283;
-  color: white;
+  background-color: var(--button-color1);
+  color: var(--primary-color);
   font-weight: 600;
   padding: 12px 25px;
   font-size: 18px;
@@ -105,7 +105,7 @@
 
   .checkout-container {
     text-align: center;
-    background-color: white;
+    background-color: var(--primary-color);
     position: static;
   }
 }
