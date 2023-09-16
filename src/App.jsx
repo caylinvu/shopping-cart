@@ -74,8 +74,11 @@ export default App;
 
 // refactor code and break things out into more components
 //// Checkout, EmptyCart
+//// Cart, ItemPage, and CartItem pages need refactored components
 
 // create updateCart function for cart change to reduce redundant code (pass through updated quantity)
 //// on cartItem and itemPage
 
 // maybe store frequently used colors/borders to var properties
+
+// maybe animate cart icon when adding to it???
