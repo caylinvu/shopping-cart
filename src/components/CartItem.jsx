@@ -4,69 +4,38 @@ import '../styles/CartItem.css';
 import QuantityAdjuster from './QuantityAdjuster';
 
 function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSelectedItems }) {
-  const cartChange = (e) => {
+  const updateCart = (newQuantity) => {
+    let updatedItems = selectedItems.map((obj) => {
+      if (obj.id == objId) {
+        return { ...obj, quantity: newQuantity };
+      } else {
+        return obj;
+      }
+    });
+    setSelectedItems(updatedItems);
+  };
+
+  const handleInput = (e) => {
     if (e.target.value > 0 && e.target.value <= 99) {
-      let updatedItems = selectedItems.map((obj) => {
-        if (obj.id == objId) {
-          return { ...obj, quantity: Number(e.target.value) };
-        } else {
-          return obj;
-        }
-      });
-      setSelectedItems(updatedItems);
+      updateCart(Number(e.target.value));
     } else if (e.target.value > 99) {
-      let updatedItems = selectedItems.map((obj) => {
-        if (obj.id == objId) {
-          return { ...obj, quantity: Number(99) };
-        } else {
-          return obj;
-        }
-      });
-      setSelectedItems(updatedItems);
+      updateCart(Number(99));
     } else if (e.target.value == '' || e.target.value == 0) {
-      let updatedItems = selectedItems.map((obj) => {
-        if (obj.id == objId) {
-          return { ...obj, quantity: '' };
-        } else {
-          return obj;
-        }
-      });
-      setSelectedItems(updatedItems);
+      updateCart('');
     }
   };
 
-  const cartDecrease = () => {
+  const handleDecrease = () => {
     if (quantity > 1) {
-      let updatedItems = selectedItems.map((obj) => {
-        if (obj.id == objId) {
-          return { ...obj, quantity: obj.quantity - 1 };
-        } else {
-          return obj;
-        }
-      });
-      setSelectedItems(updatedItems);
+      updateCart(quantity - 1);
     }
   };
 
-  const cartIncrease = () => {
+  const handleIncrease = () => {
     if (quantity == '') {
-      let updatedItems = selectedItems.map((obj) => {
-        if (obj.id == objId) {
-          return { ...obj, quantity: Number(1) };
-        } else {
-          return obj;
-        }
-      });
-      setSelectedItems(updatedItems);
+      updateCart(Number(1));
     } else if (quantity < 99) {
-      let updatedItems = selectedItems.map((obj) => {
-        if (obj.id == objId) {
-          return { ...obj, quantity: obj.quantity + 1 };
-        } else {
-          return obj;
-        }
-      });
-      setSelectedItems(updatedItems);
+      updateCart(quantity + 1);
     }
   };
 
@@ -95,9 +64,9 @@ function CartItem({ objId, imgUrl, title, price, quantity, selectedItems, setSel
         <div className="more-info">
           <QuantityAdjuster
             quantity={quantity}
-            handleDecrease={cartDecrease}
-            handleInput={cartChange}
-            handleIncrease={cartIncrease}
+            handleDecrease={handleDecrease}
+            handleInput={handleInput}
+            handleIncrease={handleIncrease}
           />
           <button className="delete-btn" onClick={deleteItem}>
             <img src="/delete.svg" alt="" />

@@ -9,7 +9,7 @@ function ItemPage() {
   const { items, selectedItems, setSelectedItems } = useOutletContext();
   const { item } = useParams();
 
-  const itemChange = (e) => {
+  const handleInput = (e) => {
     if (e.target.value > 0 && e.target.value <= 99) {
       setQuantity(Number(e.target.value));
       setIsDisabled(false);
@@ -21,13 +21,13 @@ function ItemPage() {
     }
   };
 
-  const itemDecrease = () => {
+  const handleDecrease = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
 
-  const itemIncrease = () => {
+  const handleIncrease = () => {
     if (quantity == '') {
       setQuantity(Number(1));
       setIsDisabled(false);
@@ -71,9 +71,9 @@ function ItemPage() {
                   <p>${obj.price.toFixed(2)}</p>
                   <QuantityAdjuster
                     quantity={quantity}
-                    handleDecrease={itemDecrease}
-                    handleInput={itemChange}
-                    handleIncrease={itemIncrease}
+                    handleDecrease={handleDecrease}
+                    handleInput={handleInput}
+                    handleIncrease={handleIncrease}
                   />
                   <button className="add-btn" disabled={isDisabled} onClick={() => addItem(obj)}>
                     Add to Cart
