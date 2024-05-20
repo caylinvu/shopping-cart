@@ -1,12 +1,19 @@
 # Shopping Cart Project
-Shopping cart app created with React as part of The Odin Project curriculum
+Shopping cart app that allows users to browse items in a fake store and add them to a cart
+
+Live: https://shopping-cart-caylinvu.vercel.app/
 
 ## Features
-  * Includes multiple pages to navigate between: home, store, items, & cart
-  * Add items to shopping cart
-  * Remove items from shopping cart
-  * Adjust quantity of an item in shopping cart with input field or incrementing buttons
-  * Shop items fetched from FakeStore API
+  - Includes multiple pages to navigate between: home, store, items, & cart
+  - View item detail pages
+  - Add items to shopping cart
+  - Remove items from shopping cart
+  - Adjust quantity of an item in shopping cart with input field or incrementing buttons
+  - Shop items fetched from FakeStore API
+
+## Tech Used
+ - React.js
+ - FakeStore API
 
 ## Purpose
-  * The main goal of this project is to continue practicing recently learned React concepts, particulary routers to help navigate an application
+  - To practice React concepts, particularly routers to help navigate an application 
